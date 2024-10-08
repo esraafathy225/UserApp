@@ -6,11 +6,11 @@
 
     <fragment
         android:id="@+id/displayFragment"
-        android:name="com.example.userapp.presentation.display.view.DisplayFragment"
+        android:name="com.example.userapp.presentation.display.view.GetUserFragment"
         android:label="DisplayFragment" />
     <fragment
         android:id="@+id/inputFragment"
-        android:name="com.example.userapp.presentation.input.view.InputFragment"
+        android:name="com.example.userapp.presentation.save_user.view.SaveUserFragment"
         android:label="InputFragment" >
         <action
             android:id="@+id/action_inputFragment_to_displayFragment"

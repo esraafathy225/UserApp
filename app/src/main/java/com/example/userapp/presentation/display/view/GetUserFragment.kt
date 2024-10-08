@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.userapp.databinding.FragmentDisplayBinding
+import com.example.userapp.databinding.FragmentGetUserBinding
 
-class DisplayFragment : Fragment(){
+class GetUserFragment : Fragment(){
 
-    private var _binding: FragmentDisplayBinding? = null
+    private var _binding: FragmentGetUserBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,7 +17,7 @@ class DisplayFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentDisplayBinding.inflate(inflater,container,false)
+        _binding = FragmentGetUserBinding.inflate(inflater,container,false)
         val view  = binding.root
 
         return view
