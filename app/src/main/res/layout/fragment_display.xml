@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_16">
+
+    <TextView
+        android:id="@+id/tvDisplayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_details"
+        android:textSize="@dimen/size_24"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginBottom="@dimen/margin_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_label"
+        android:textSize="@dimen/size_18"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplayTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_24"
+        android:textColor="@color/textPrimaryColor"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_18"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplayTitle"
+        app:layout_constraintStart_toEndOf="@id/tvLabelName"
+        android:layout_marginTop="@dimen/margin_24"
+        android:textColor="@color/textSecondaryColor"/>
+
+    <TextView
+        android:id="@+id/tvLabelAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age_label"
+        android:textSize="@dimen/size_18"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textColor="@color/textPrimaryColor"/>
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_18"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelName"
+        app:layout_constraintStart_toEndOf="@id/tvLabelAge"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textColor="@color/textSecondaryColor"/>
+
+    <TextView
+        android:id="@+id/tvLabelJobTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/job_label"
+        android:textSize="@dimen/size_18"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelAge"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textColor="@color/textPrimaryColor"/>
+
+    <TextView
+        android:id="@+id/tvJobTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_18"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelAge"
+        app:layout_constraintStart_toEndOf="@id/tvLabelJobTitle"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textColor="@color/textSecondaryColor"/>
+
+    <TextView
+        android:id="@+id/tvLabelGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender_label"
+        android:textSize="@dimen/size_18"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelJobTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textColor="@color/textPrimaryColor"/>
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_18"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelJobTitle"
+        app:layout_constraintStart_toEndOf="@id/tvLabelGender"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textColor="@color/textSecondaryColor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
