@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_16">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_info"
+        android:layout_marginTop="@dimen/margin_24"
+        android:textSize="@dimen/size_24"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/margin_24"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:layout_marginTop="@dimen/margin_24"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@drawable/box_color"
+        app:hintTextColor="@color/purple_200"
+        app:boxCornerRadiusTopEnd="@dimen/radius_14"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_14"
+        app:boxCornerRadiusTopStart="@dimen/radius_14"
+        app:boxCornerRadiusBottomStart="@dimen/radius_14"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Age Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/age"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/tilName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@drawable/box_color"
+        app:hintTextColor="@color/purple_200"
+        app:boxCornerRadiusTopEnd="@dimen/radius_14"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_14"
+        app:boxCornerRadiusTopStart="@dimen/radius_14"
+        app:boxCornerRadiusBottomStart="@dimen/radius_14"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Job Title Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilJobTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/job_title"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/tilAge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@drawable/box_color"
+        app:hintTextColor="@color/purple_200"
+        app:boxCornerRadiusTopEnd="@dimen/radius_14"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_14"
+        app:boxCornerRadiusTopStart="@dimen/radius_14"
+        app:boxCornerRadiusBottomStart="@dimen/radius_14"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etJobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Gender Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/gender"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/tilJobTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@drawable/box_color"
+        app:hintTextColor="@color/purple_200"
+        app:boxCornerRadiusTopEnd="@dimen/radius_14"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_14"
+        app:boxCornerRadiusTopStart="@dimen/radius_14"
+        app:boxCornerRadiusBottomStart="@dimen/radius_14"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Save Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginTop="@dimen/margin_24"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/tilGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_200"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
