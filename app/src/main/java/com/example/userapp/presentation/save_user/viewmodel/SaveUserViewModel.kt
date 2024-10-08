@@ -81,7 +81,7 @@ class SaveUserViewModel @Inject constructor(
         viewModelScope.launch {
             _saveUserState.value = SaveUserState.Loading
             try {
-                saveUserUseCase(user) // Call your use case to save the user
+                 saveUserUseCase(user)
                 _saveUserState.value = SaveUserState.Success("User saved successfully")
             } catch (e: Exception) {
                 _saveUserState.value = SaveUserState.Error(e)

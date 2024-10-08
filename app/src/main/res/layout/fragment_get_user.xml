@@ -13,6 +13,7 @@
         android:text="@string/user_details"
         android:textSize="@dimen/size_24"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginTop="@dimen/margin_24"
         android:layout_marginBottom="@dimen/margin_24"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,13 +35,13 @@
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textSize="@dimen/size_18"
-        android:layout_marginStart="@dimen/margin_16"
         app:layout_constraintTop_toBottomOf="@id/tvDisplayTitle"
         app:layout_constraintStart_toEndOf="@id/tvLabelName"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/margin_24"
-        android:textColor="@color/textSecondaryColor"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tvLabelAge"
@@ -57,13 +58,12 @@
     <TextView
         android:id="@+id/tvAge"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textSize="@dimen/size_18"
-        android:layout_marginStart="@dimen/margin_16"
         app:layout_constraintTop_toBottomOf="@id/tvLabelName"
-        app:layout_constraintStart_toEndOf="@id/tvLabelAge"
+        app:layout_constraintStart_toStartOf="@id/tvName"
         android:layout_marginTop="@dimen/margin_16"
-        android:textColor="@color/textSecondaryColor"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tvLabelJobTitle"
@@ -80,13 +80,12 @@
     <TextView
         android:id="@+id/tvJobTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textSize="@dimen/size_18"
-        android:layout_marginStart="@dimen/margin_16"
         app:layout_constraintTop_toBottomOf="@id/tvLabelAge"
-        app:layout_constraintStart_toEndOf="@id/tvLabelJobTitle"
+        app:layout_constraintStart_toStartOf="@id/tvName"
         android:layout_marginTop="@dimen/margin_16"
-        android:textColor="@color/textSecondaryColor"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tvLabelGender"
@@ -103,12 +102,21 @@
     <TextView
         android:id="@+id/tvGender"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textSize="@dimen/size_18"
-        android:layout_marginStart="@dimen/margin_16"
         app:layout_constraintTop_toBottomOf="@id/tvLabelJobTitle"
-        app:layout_constraintStart_toEndOf="@id/tvLabelGender"
+        app:layout_constraintStart_toStartOf="@id/tvName"
         android:layout_marginTop="@dimen/margin_16"
-        android:textColor="@color/textSecondaryColor"/>
+        android:textColor="@color/black"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:id="@+id/progressBar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

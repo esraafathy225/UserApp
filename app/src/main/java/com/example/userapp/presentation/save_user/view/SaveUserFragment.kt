@@ -9,6 +9,8 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.example.userapp.R
 import com.example.userapp.common.SaveUserState
 import com.example.userapp.data.model.User
 import com.example.userapp.databinding.FragmentSaveUserBinding
@@ -66,6 +68,7 @@ class SaveUserFragment : Fragment() {
                         // Show success message
                         binding.progressBar.visibility=View.GONE
                         Toast.makeText(context, state.message, Toast.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.action_inputFragment_to_displayFragment)
                     }
                     is SaveUserState.Error -> {
                         // Show error message
