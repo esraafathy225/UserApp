@@ -1,4 +1,4 @@
-package com.example.userapp.presentation.display.view
+package com.example.userapp.presentation.display_user.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,14 +8,15 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.userapp.common.GetUserState
 import com.example.userapp.databinding.FragmentGetUserBinding
-import com.example.userapp.presentation.display.viewmodel.GetUserViewModel
+import com.example.userapp.presentation.display_user.viewmodel.GetUserViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class GetUserFragment : Fragment(){
+class DisplayUserFragment : Fragment(){
 
     private var _binding: FragmentGetUserBinding? = null
     private val binding get() = _binding!!
@@ -34,10 +35,15 @@ class GetUserFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.ivBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
         viewModel.getUser()
 
         // Collecting the user state
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.addUserState.collect { state ->
                 when (state) {
                     is GetUserState.Loading -> {

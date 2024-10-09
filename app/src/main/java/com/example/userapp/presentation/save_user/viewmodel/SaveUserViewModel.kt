@@ -40,7 +40,7 @@ class SaveUserViewModel @Inject constructor(
     private val _errorMessages = MutableStateFlow(mapOf<String, String?>())
     val errorMessages: StateFlow<Map<String, String?>> = _errorMessages.asStateFlow()
 
-    // Function to update input fields
+    // Update input fields
     fun updateInput(field: String, value: String) {
         when (field) {
             "name" -> {
@@ -66,7 +66,7 @@ class SaveUserViewModel @Inject constructor(
         validateInputs()
     }
 
-    // Function to validate inputs and set errors
+    // Validate inputs and set errors
     private fun validateInputs() {
         val errors = mutableMapOf<String, String?>()
         if (isNameTouched && _name.value.isBlank()) errors["name"] = "Name cannot be empty"

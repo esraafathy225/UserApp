@@ -57,7 +57,7 @@ class SaveUserFragment : Fragment() {
     }
 
     private fun collectSaveUserState(){
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.saveUserState.collect { state ->
                 when (state) {
                     is SaveUserState.Loading -> {
@@ -65,9 +65,8 @@ class SaveUserFragment : Fragment() {
                         binding.progressBar.visibility=View.VISIBLE
                     }
                     is SaveUserState.Success -> {
-                        // Show success message
+                        // Navigate to display fragment
                         binding.progressBar.visibility=View.GONE
-                        Toast.makeText(context, state.message, Toast.LENGTH_SHORT).show()
                         findNavController().navigate(R.id.action_inputFragment_to_displayFragment)
                     }
                     is SaveUserState.Error -> {

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/displayFragment"
-        android:name="com.example.userapp.presentation.display.view.GetUserFragment"
+        android:name="com.example.userapp.presentation.display_user.view.DisplayUserFragment"
         android:label="DisplayFragment" />
     <fragment
         android:id="@+id/inputFragment"
