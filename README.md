@@ -38,4 +38,4 @@ https://drive.google.com/file/d/1Jhz2WjVb9DYtd4hBiER-tb2RSp4ys4dL/view?usp=shari
 
 **Clone the Repository**:
    ```bash
-   git clone [https://github.com/esraafathy225/PlantsApp.git](https://github.com/esraafathy225/UserApp)
+   git clone https://github.com/esraafathy225/UserApp
