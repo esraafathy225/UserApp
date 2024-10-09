@@ -1,4 +1,4 @@
-# Plants Paging App
+# User App
 
 ## Overview
 
